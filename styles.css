@@ -1,0 +1,309 @@
+:root {
+    --instagram-blue: #0095f6;
+    --instagram-blue-hover: #1877f2;
+    --instagram-border: #dbdbdb;
+    --instagram-text: #262626;
+    --instagram-light-text: #8e8e8e;
+    --instagram-bg: #fafafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--instagram-bg);
+    color: var(--instagram-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 10px;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 935px;
+    width: 100%;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.phones-container {
+    display: none;
+    position: relative;
+    align-items: center;
+}
+
+@media (min-width: 875px) {
+    .phones-container {
+        display: flex;
+    }
+}
+
+.login-container {
+    max-width: 350px;
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--instagram-border);
+    border-radius: 1px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.login-header {
+    display: flex;
+    justify-content: center;
+    margin: 22px 0 12px;
+}
+
+.login-header img {
+    max-width: 175px;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 8px 2px;
+    background-color: var(--instagram-bg);
+    border: 1px solid var(--instagram-border);
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #a8a8a8;
+}
+
+.input-label {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--instagram-light-text);
+    transition: all 0.15s ease-out;
+    pointer-events: none;
+}
+
+.form-input:focus ~ .input-label,
+.form-input:valid ~ .input-label {
+    transform: translateY(-130%);
+    font-size: 10px;
+}
+
+.show-password {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--instagram-text);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.login-button {
+    margin-top: 8px;
+    padding: 7px;
+    background-color: var(--instagram-blue);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.login-button:hover {
+    background-color: var(--instagram-blue-hover);
+}
+
+.login-button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 10px 0;
+}
+
+.separator-line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--instagram-border);
+}
+
+.separator-text {
+    color: var(--instagram-light-text);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #385185;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.facebook-login:hover {
+    color: var(--instagram-blue-hover);
+}
+
+.facebook-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.forgot-password a {
+    color: #00376b;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.signup-card {
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-card a {
+    color: var(--instagram-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+.facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.facebook-login:hover {
+    opacity: 0.8;
+}
+
+.facebook-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.facebook-text {
+    color: #385185;
+    font-weight: 600;
+    font-size: 14px;
+}
+.get-app {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.get-app p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.app-stores {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.app-link img {
+    height: 40px;
+}
+
+.footer {
+    margin-top: 52px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-link {
+    color: var(--instagram-light-text);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: var(--instagram-light-text);
+    font-size: 12px;
+}
+
+.language-selector {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+select {
+    border: none;
+    background: none;
+    color: var(--instagram-light-text);
+    font-size: 12px;
+}

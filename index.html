@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instagram - Log in or sign up to connect with friends, share photos and videos">
+    <title>Instagram • Log In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <main class="main-container">
+        <section class="auth-container">
+            <div class="phones-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWe4pxW3YmEUYigcD1teAB4_DTX7SCaO64dQ&s" alt="Instagram App Preview">
+            </div>
+
+            <div class="login-container">
+                <div class="card">
+                    <header class="login-header">
+                        <img src="download.png" alt="Instagram">
+                    </header>
+
+                    <form class="form" action="#" method="POST" novalidate>
+                        <div class="input-group">
+                            <input type="text" class="form-input" id="username" required>
+                            <label class="input-label" for="username">Phone number, username, or email</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" class="form-input" id="password" required>
+                            <label class="input-label" for="password">Password</label>
+                            <button type="button" class="show-password">Show</button>
+                        </div>
+
+                        <button type="submit" class="login-button" disabled>Log In</button>
+
+                        <div class="separator">
+                            <div class="separator-line"></div>
+                            <div class="separator-text">or</div>
+                            <div class="separator-line"></div>
+                        </div>
+
+                        <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="facebook-login">
+                            <img src="facebook.png" alt="Facebook Icon" class="facebook-icon">
+                            <span class="facebook-text">Log in with Facebook</span>
+                        </a>
+            
+                        <div class="forgot-password">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card signup-card">
+                    <p>Don't have an account? <a href="#">Sign up</a></p>
+                </div>
+
+                <div class="get-app">
+                    <p>Get the app.</p>
+                    <div class="app-stores">
+                        <a href="https://apps.apple.com/us/app/instagram/id389801252" class="app-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Download_on_the_App_Store_RGB_blk.svg/1280px-Download_on_the_App_Store_RGB_blk.svg.png" alt="Get it on App Store">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN" class="app-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Get it on Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <div class="language-selector">
+                    <select aria-label="Switch Display Language">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                    </select>
+                </div>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Blog</a>
+                <a href="#" class="footer-link">Jobs</a>
+                <a href="#" class="footer-link">Help</a>
+                <a href="#" class="footer-link">API</a>
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+                <a href="#" class="footer-link">Top Accounts</a>
+                <a href="#" class="footer-link">Locations</a>
+                <a href="#" class="footer-link">Instagram Lite</a>
+                <a href="#" class="footer-link">Contact Uploading & Non-Users</a>
+                <a href="#" class="footer-link">Meta Verified</a>
+            </div>
+            <div class="copyright">
+                © 2024 Instagram from Meta
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Enable login button when both fields have content
+        const loginButton = document.querySelector('.login-button');
+        const inputs = document.querySelectorAll('.form-input');
+
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                const allFilled = Array.from(inputs).every(input => input.value.length > 0);
+                loginButton.disabled = !allFilled;
+            });
+        });
+
+        // Toggle password visibility
+        const passwordInput = document.getElementById('password');
+        const showPasswordButton = document.querySelector('.show-password');
+
+        showPasswordButton.addEventListener('click', () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPasswordButton.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                showPasswordButton.textContent = 'Show';
+            }
+        });
+    </script>
+</body>
+</html>
